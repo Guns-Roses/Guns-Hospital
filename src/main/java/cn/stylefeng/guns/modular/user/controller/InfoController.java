@@ -49,7 +49,7 @@ public class InfoController extends BaseController {
     @RequestMapping("/info_update/{infoId}")
     public String infoUpdate(@PathVariable Integer infoId, Model model) {
         Info info = infoService.selectById(infoId);
-        model.addAttribute("item",info);
+        model.addAttribute("item", info);
         LogObjectHolder.me().set(info);
         return PREFIX + "info_edit.html";
     }

@@ -167,7 +167,12 @@ public class UserMgrController extends BaseController {
         }
     }
 
-    public static  void main(String args[]){
+    /**
+     * 根据用户的salt，设置密码
+     *
+     * @param args
+     */
+    public static void main(String args[]) {
         String abc = "x7bl3";
         String result = ShiroKit.md5("123456", abc);
         System.out.println(result);
